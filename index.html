@@ -3,139 +3,1663 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Devashobha Sanstha Trust - Supporting Elderly with Dignity in Mumbai">
-  <title>Devashobha Sanstha Trust | Best Old Age Home in Mumbai</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Devashobha Foundation - Transforming lives through Women Empowerment, Skill Development, Elder Care, Education, Healthcare & Environment initiatives. Join our mission for social change.">
+  <title>Devashobha Foundation | Empowering Communities | Leading NGO in India</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --primary: #e11d48;
+      --primary-dark: #be185d;
+      --secondary: #f59e0b;
+      --accent: #059669;
+      --accent-light: #10b981;
+      --bg-light: #fef7ff;
+      --bg-white: #ffffff;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
+      --gradient: linear-gradient(135deg, #e11d48 0%, #be185d 50%, #9f1239 100%);
+      --gradient-alt: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
+      --gradient-hero: linear-gradient(135deg, #e11d48 0%, #be185d 30%, #9f1239 60%, #831843 100%);
+      --gradient-orange: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+      --gradient-purple: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Roboto', sans-serif; background: #f5f8fa; color: #333; line-height: 1.6; }
-    header { background: #0077b6; color: white; padding: 2rem; text-align: center; position: relative; }
-    header img.logo { position: absolute; top: 1rem; left: 1rem; height: 60px; }
-    nav { background: #023e8a; display: flex; flex-wrap: wrap; justify-content: center; padding: 1rem; gap: 1.5rem; }
-    nav a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
-    nav a:hover { color: #90e0ef; }
-    .hero { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x600/?elderly,home') center/cover no-repeat; height: 60vh; display: flex; justify-content: center; align-items: center; color: white; text-align: center; font-size: 2rem; padding: 1rem; }
-    section { padding: 2rem; max-width: 1000px; margin: auto; }
-    h2 { color: #0077b6; margin-bottom: 1rem; }
-    ul { margin: 1rem 0; padding-left: 1.5rem; }
-    .btn { background: #0077b6; color: white; padding: 0.7em 1.5em; text-decoration: none; border-radius: 4px; display: inline-block; margin-top: 1rem; transition: background 0.3s ease; }
-    .btn:hover { background: #023e8a; }
-    .cta { background: #ff6f00; color: white; padding: 2rem; text-align: center; border-radius: 8px; margin-top: 2rem; }
-    .contact-form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
-    .contact-form input, .contact-form textarea { padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
-    .contact-form button { background: #0077b6; color: white; border: none; padding: 0.8rem; cursor: pointer; border-radius: 5px; font-size: 1rem; }
-    .contact-form button:hover { background: #005f99; }
-    .logo-banner { text-align: center; padding: 2rem 0; background: #f0f0f0; }
-    .logo-banner img { max-width: 180px; }
-    .features, .facility-gallery, .why-us, .stats { padding: 2rem 0; text-align: center; }
-    .features ul, .why-us ul { list-style-type: none; padding: 0; }
-    .features li, .why-us li { margin: 0.5rem 0; font-weight: 500; }
-    .facility-gallery img { max-width: 300px; margin: 1rem; border-radius: 8px; }
-    .stats div { display: inline-block; margin: 1rem; font-size: 1.2rem; }
-    footer { background: #023e8a; color: white; text-align: center; padding: 1rem; margin-top: 3rem; }
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: var(--bg-light); 
+      color: var(--text-primary); 
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Header & Navigation */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(15px);
+      z-index: 1000;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 45px;
+      height: 45px;
+      background: var(--gradient);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.3rem;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .cta-button {
+      background: var(--gradient);
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow);
+      font-size: 0.9rem;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .mobile-menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      background: var(--gradient-hero);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -50%;
+      width: 120%;
+      height: 120%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(3deg); }
+    }
+
+    .hero-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      z-index: 3;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: white;
+      color: var(--primary);
+      padding: 1.2rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-lg);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.35);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      padding: 1.2rem 2.5rem;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: white;
+    }
+
+    .hero-visual {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 25px;
+      box-shadow: var(--shadow-lg);
+      transform: rotate(2deg);
+      transition: transform 0.5s ease;
+    }
+
+    .hero-image:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    /* Impact Stats */
+    .impact-stats {
+      background: white;
+      padding: 4rem 0;
+      margin-top: -3rem;
+      position: relative;
+      z-index: 10;
+      box-shadow: var(--shadow);
+    }
+
+    .stats-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #fef7ff 0%, #fdf2f8 100%);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(225, 29, 72, 0.1);
+    }
+
+    .stat-item:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* Our Work Section */
+    .our-work {
+      padding: 6rem 0;
+      background: white;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+
+    .work-card {
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.4s ease;
+      border: 1px solid #f1f5f9;
+      position: relative;
+    }
+
+    .work-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .work-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .work-card:hover .work-image {
+      transform: scale(1.05);
+    }
+
+    .work-content {
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    .work-icon {
+      position: absolute;
+      top: -25px;
+      left: 2.5rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.3rem;
+      box-shadow: var(--shadow);
+    }
+
+    .work-icon.women { background: var(--gradient); }
+    .work-icon.skill { background: var(--gradient-orange); }
+    .work-icon.elder { background: var(--gradient-purple); }
+    .work-icon.education { background: var(--gradient-alt); }
+    .work-icon.healthcare { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%); }
+    .work-icon.environment { background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%); }
+
+    .work-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 1rem 0 1rem 0;
+      color: var(--text-primary);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .work-description {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    .work-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .work-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .work-features li::before {
+      content: '✓';
+      background: var(--accent);
+      color: white;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .work-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .work-link:hover {
+      gap: 0.8rem;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #fef7ff 0%, #fdf2f8 100%);
+    }
+
+    .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .about-highlights {
+      list-style: none;
+      margin-bottom: 2.5rem;
+    }
+
+    .about-highlights li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .about-highlights li::before {
+      content: '✓';
+      background: var(--accent);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 25px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Section Styling */
+    .section {
+      padding: 6rem 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-badge {
+      display: inline-block;
+      background: var(--gradient);
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* CSR Partnership Section */
+    .csr-section {
+      background: var(--gradient-alt);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .csr-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 200%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      animation: float 8s ease-in-out infinite reverse;
+    }
+
+    .csr-container {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .csr-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    .csr-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+      line-height: 1.7;
+    }
+
+    .csr-highlights {
+      list-style: none;
+      margin-bottom: 2.5rem;
+    }
+
+    .csr-highlights li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      font-size: 1.05rem;
+    }
+
+    .csr-highlights li::before {
+      content: '✓';
+      background: rgba(255, 255, 255, 0.25);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 700;
+      backdrop-filter: blur(10px);
+    }
+
+    .funding-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      padding: 2.5rem;
+      border-radius: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .funding-amount {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .funding-period {
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .funding-breakdown {
+      list-style: none;
+    }
+
+    .funding-breakdown li {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      font-weight: 500;
+    }
+
+    /* Volunteer Section */
+    .volunteer-section {
+      background: linear-gradient(135deg, #fef7ff 0%, #fdf2f8 100%);
+      padding: 6rem 0;
+    }
+
+    .volunteer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .volunteer-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(225, 29, 72, 0.1);
+    }
+
+    .volunteer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .volunteer-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient);
+      color: white;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .volunteer-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .volunteer-description {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .volunteer-btn {
+      background: var(--primary);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .volunteer-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: white;
+      padding: 6rem 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      margin-top: 3rem;
+    }
+
+    .contact-info {
+      background: linear-gradient(135deg, #fef7ff 0%, #fdf2f8 100%);
+      padding: 3rem;
+      border-radius: 25px;
+      border: 1px solid rgba(225, 29, 72, 0.1);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-icon {
+      width: 45px;
+      height: 45px;
+      background: var(--gradient);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 3rem;
+      border-radius: 25px;
+      box-shadow: var(--shadow);
+      border: 1px solid #f1f5f9;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: #fafafa;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: white;
+      box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.1);
+    }
+
+    .form-textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background: var(--gradient);
+      color: white;
+      padding: 1.2rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow);
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--text-primary);
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 1.5rem;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .footer-section p, .footer-section a {
+      color: #9ca3af;
+      text-decoration: none;
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .footer-section a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      padding-top: 2rem;
+      text-align: center;
+      color: #9ca3af;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .hero-container, .csr-container, .contact-grid, .about-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      
+      .hero-title {
+        font-size: 3.5rem;
+      }
+      
+      .section-title {
+        font-size: 2.5rem;
+      }
+      
+      .work-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    }
+
     @media (max-width: 768px) {
-      nav { flex-direction: column; }
-      .hero { font-size: 1.5rem; padding: 2rem; height: 50vh; }
-      .facility-gallery img { width: 90%; margin: 0.5rem 0; }
+      .mobile-menu-toggle {
+        display: flex;
+      }
+      
+      .nav-menu {
+        display: none;
+      }
+      
+      .hero-title {
+        font-size: 2.8rem;
+      }
+      
+      .section-title {
+        font-size: 2.2rem;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+      
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .volunteer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-container {
+        padding: 1rem;
+      }
+      
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .container {
+        padding: 0 1rem;
+      }
+
+    }
+    }
+
+    /* Animations */
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .animate-slide-up {
+      animation: slideInUp 0.6s ease-out;
+    }
+
+    .animate-fade-scale {
+      animation: fadeInScale 0.8s ease-out;
+    }
+
+    /* Additional Utility Classes */
+    .text-gradient {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="freepik__adjust__77518.png" alt="NGO Logo" class="logo" />
-    <h1>Devashobha Sanstha Trust</h1>
-    <p>Best Old Age Home in Mumbai – Compassion. Dignity. Care.</p>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        Devashobha Foundation
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#work" class="nav-link">Our Work</a></li>
+        <li><a href="#volunteer" class="nav-link">Volunteer</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <a href="#donate" class="cta-button">Donate Now</a>
+      
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#project">Project</a>
-    <a href="#impact">Impact</a>
-    <a href="#donate">Donate</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="hero">
-    <div>Join Us in Restoring Hope to the Elderly</div>
-  </div>
-
-  <div class="logo-banner">
-    <img src="freepik__adjust__77518.png" alt="Elderly Care Logo">
-  </div>
-
-  <section id="about">
-    <h2>Who We Are</h2>
-    <p>Devashobha Sanstha Trust is a non-profit organization based in Mumbai, dedicated to the care, dignity, and holistic well-being of elderly citizens who are destitute, neglected, or abandoned. We offer long-term residential care, medical services, and emotional support in a nurturing environment.</p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-award"></i>
+          Trusted by 50,000+ Lives
+        </div>
+        <h1 class="hero-title">Empowering Communities, Transforming Lives</h1>
+        <p class="hero-subtitle">
+          Join Devashobha Foundation in our mission to create lasting change through women empowerment, 
+          skill development, elder care, education, healthcare, and environmental conservation.
+        </p>
+        <div class="hero-buttons">
+          <a href="#work" class="btn-primary">
+            <i class="fas fa-rocket"></i>
+            Explore Our Work
+          </a>
+          <a href="#volunteer" class="btn-secondary">Join Our Mission</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Community Empowerment" class="hero-image">
+      </div>
+    </div>
   </section>
 
-  <section class="why-us">
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>Peaceful and hygienic Mumbai-based residence</li>
-      <li>Round-the-clock caregiving with medical tie-ups</li>
-      <li>Home-style nutritious meals</li>
-      <li>Festive celebrations and cultural integration</li>
-      <li>Legal support and senior citizen rights advocacy</li>
-    </ul>
+  <!-- Impact Stats -->
+  <section class="impact-stats">
+    <div class="stats-container">
+      <div class="stat-item animate-fade-scale">
+        <div class="stat-number">50,000+</div>
+        <div class="stat-label">Lives Impacted</div>
+      </div>
+      <div class="stat-item animate-fade-scale">
+        <div class="stat-number">200+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-item animate-fade-scale">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Years of Service</div>
+      </div>
+      <div class="stat-item animate-fade-scale">
+        <div class="stat-number">25+</div>
+        <div class="stat-label">States Covered</div>
+      </div>
+    </div>
   </section>
 
-  <section id="project">
-    <h2>Our Old Age Home Project</h2>
-    <p>This initiative establishes a fully functional 30-bed old age home in Mumbai for abandoned and needy senior citizens. We ensure:</p>
-    <ul>
-      <li>Safe, supervised accommodation</li>
-      <li>3 meals/day + evening tea & snacks</li>
-      <li>Doctor visits, medicine support, emergency services</li>
-      <li>Recreation, group activities, digital literacy & counseling</li>
-    </ul>
-    <p><strong>CSR Requirement:</strong> ₹3.48 Cr for 3 years</p>
-    <a href="#contact" class="btn">Download Full Project Report</a>
+  <!-- Our Work Section -->
+  <section id="work" class="our-work section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Our Impact Areas</div>
+        <h2 class="section-title">Transforming Lives Through Action</h2>
+        <p class="section-subtitle">
+          We work across six key areas to create sustainable change and empower communities 
+          across India. Each initiative is designed to address critical social challenges 
+          and create lasting positive impact.
+        </p>
+      </div>
+      
+      <div class="work-grid">
+        <!-- Women Empowerment -->
+        <div class="work-card animate-slide-up">
+          <img src="https://images.unsplash.com/photo-1594608661623-aa0bd6a69132?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Women Empowerment" class="work-image">
+          <div class="work-content">
+            <div class="work-icon women">
+              <i class="fas fa-female"></i>
+            </div>
+            <h3 class="work-title">Women Empowerment</h3>
+            <p class="work-description">
+              Empowering women through skill development, financial literacy, and leadership training. 
+              We provide microfinance opportunities, vocational training, and create platforms for 
+              women to become financially independent and community leaders.
+            </p>
+            <ul class="work-features">
+              <li>Self-Help Group Formation</li>
+              <li>Microfinance & Banking Linkage</li>
+              <li>Vocational Training Programs</li>
+              <li>Leadership Development</li>
+              <li>Digital Literacy Training</li>
+            </ul>
+            <a href="#" class="work-link">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Skill Development -->
+        <div class="work-card animate-slide-up">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Skill Development" class="work-image">
+          <div class="work-content">
+            <div class="work-icon skill">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="work-title">Skill Development</h3>
+            <p class="work-description">
+              Creating employment opportunities through comprehensive skill development programs. 
+              We offer training in various trades, digital skills, and entrepreneurship to 
+              help individuals build sustainable livelihoods.
+            </p>
+            <ul class="work-features">
+              <li>Technical Skills Training</li>
+              <li>Digital & IT Literacy</li>
+              <li>Entrepreneurship Development</li>
+              <li>Placement Assistance</li>
+              <li>Certification Programs</li>
+            </ul>
+            <a href="#" class="work-link">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Elder Care -->
+        <div class="work-card animate-slide-up">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Elder Care" class="work-image">
+          <div class="work-content">
+            <div class="work-icon elder">
+              <i class="fas fa-user-friends"></i>
+            </div>
+            <h3 class="work-title">Elder Care</h3>
+            <p class="work-description">
+              Providing compassionate care and support to elderly citizens through specialized 
+              care facilities, health monitoring, and social engagement programs. We ensure 
+              dignity and quality of life for our senior community members.
+            </p>
+            <ul class="work-features">
+              <li>Residential Care Facilities</li>
+              <li>Health Monitoring Services</li>
+              <li>Social Engagement Programs</li>
+              <li>Nutritional Support</li>
+              <li>Emergency Response System</li>
+            </ul>
+            <a href="#" class="work-link">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="work-card animate-slide-up">
+          <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Education" class="work-image">
+          <div class="work-content">
+            <div class="work-icon education">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="work-title">Education</h3>
+            <p class="work-description">
+              Transforming lives through quality education initiatives. We run schools, 
+              provide scholarships, and create learning opportunities for children from 
+              underprivileged backgrounds to break the cycle of poverty.
+            </p>
+            <ul class="work-features">
+              <li>Primary & Secondary Schools</li>
+              <li>Scholarship Programs</li>
+              <li>Digital Learning Platforms</li>
+              <li>Teacher Training</li>
+              <li>Infrastructure Development</li>
+            </ul>
+            <a href="#" class="work-link">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Healthcare -->
+        <div class="work-card animate-slide-up">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare" class="work-image">
+          <div class="work-content">
+            <div class="work-icon healthcare">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h3 class="work-title">Healthcare</h3>
+            <p class="work-description">
+              Ensuring accessible healthcare for all through mobile clinics, health camps, 
+              and awareness programs. We focus on preventive care, maternal health, and 
+              treatment of common diseases in rural and urban areas.
+            </p>
+            <ul class="work-features">
+              <li>Mobile Medical Units</li>
+              <li>Health Camps & Screenings</li>
+              <li>Maternal & Child Health</li>
+              <li>Vaccination Programs</li>
+              <li>Health Awareness Campaigns</li>
+            </ul>
+            <a href="#" class="work-link">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Environment -->
+        <div class="work-card animate-slide-up">
+          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Environment" class="work-image">
+          <div class="work-content">
+            <div class="work-icon environment">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3 class="work-title">Environment</h3>
+            <p class="work-description">
+              Protecting our planet through environmental conservation initiatives. We work 
+              on afforestation, waste management, renewable energy promotion, and climate 
+              change awareness to create a sustainable future.
+            </p>
+            <ul class="work-features">
+              <li>Tree Plantation Drives</li>
+              <li>Waste Management Programs</li>
+              <li>Renewable Energy Projects</li>
+              <li>Water Conservation</li>
+              <li>Climate Awareness Campaigns</li>
+            </ul>
+            <a href="#" class="work-link">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="facility-gallery">
-    <h2>Our Facility</h2>
-    <img src="https://source.unsplash.com/400x250/?elderly" alt="Elder Care">
-    <img src="https://source.unsplash.com/400x250/?caregiver" alt="Caregiver">
+  <!-- About Section -->
+  <section id="about" class="about-section section">
+    <div class="container">
+      <div class="about-container">
+        <div class="about-content">
+          <h2>Creating Lasting Change Since 2008</h2>
+          <p>
+            Devashobha Foundation has been at the forefront of social transformation in India, 
+            working tirelessly to address the most pressing challenges facing our communities. 
+            Our holistic approach ensures sustainable development and long-term impact.
+          </p>
+          <p>
+            Founded with the vision of creating an equitable society, we have evolved into 
+            one of India's most trusted NGOs, implementing evidence-based programs that 
+            create measurable change in the lives of millions.
+          </p>
+          <ul class="about-highlights">
+            <li>ISO 9001:2015 Certified Organization</li>
+            <li>12A & 80G Registered with Income Tax</li>
+            <li>FCRA Approved for International Funding</li>
+            <li>Guidestar India Transparency Certified</li>
+            <li>NITI Aayog Registered NGO</li>
+          </ul>
+          <a href="#volunteer" class="btn-primary">Join Our Mission</a>
+        </div>
+        <div class="about-visual">
+          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Our Team" class="about-image">
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="impact">
-    <h2>Impact Highlights</h2>
-    <ul>
-      <li>20+ vulnerable elders already identified for onboarding</li>
-      <li>Active partnerships with local doctors & volunteers</li>
-      <li>CSR1, 12A, 80G (provisional) & NGO Darpan ID available</li>
-    </ul>
+  <!-- CSR Partnership Section -->
+  <section class="csr-section section">
+    <div class="container">
+      <div class="csr-container">
+        <div class="csr-content">
+          <h2>Corporate Social Responsibility Partnerships</h2>
+          <p>
+            Partner with us to fulfill your CSR objectives while creating meaningful social impact. 
+            Our transparent processes and measurable outcomes ensure your CSR investments drive 
+            real change in communities across India.
+          </p>
+          <ul class="csr-highlights">
+            <li>Customized CSR Program Design</li>
+            <li>Transparent Impact Reporting</li>
+            <li>Employee Engagement Opportunities</li>
+            <li>Tax Benefits under Section 80G</li>
+            <li>Brand Association with Social Causes</li>
+          </ul>
+          <a href="#contact" class="btn-primary">Partner With Us</a>
+        </div>
+        <div class="funding-card">
+          <div class="funding-amount">₹50+ Crores</div>
+          <div class="funding-period">CSR Funds Managed (2020-2024)</div>
+          <ul class="funding-breakdown">
+            <li>
+              <span>Education & Skill Development</span>
+              <span>40%</span>
+            </li>
+            <li>
+              <span>Healthcare Initiatives</span>
+              <span>25%</span>
+            </li>
+            <li>
+              <span>Women Empowerment</span>
+              <span>20%</span>
+            </li>
+            <li>
+              <span>Environmental Projects</span>
+              <span>15%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="stats">
-    <h2>Our Numbers</h2>
-    <div><strong>30+</strong><br>Residents Supported</div>
-    <div><strong>100+</strong><br>Meals Served Daily</div>
-    <div><strong>15+</strong><br>Trained Staff & Volunteers</div>
+  <!-- Volunteer Section -->
+  <section id="volunteer" class="volunteer-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Join Our Mission</div>
+        <h2 class="section-title">Volunteer With Us</h2>
+        <p class="section-subtitle">
+          Be part of the change you want to see. Join thousands of volunteers who are 
+          making a difference in communities across India.
+        </p>
+      </div>
+      
+      <div class="volunteer-grid">
+        <div class="volunteer-card">
+          <div class="volunteer-icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3 class="volunteer-title">Field Volunteer</h3>
+          <p class="volunteer-description">
+            Work directly with communities, implement programs, and create grassroots impact 
+            through hands-on involvement in our various initiatives.
+          </p>
+          <a href="#" class="volunteer-btn">Apply Now</a>
+        </div>
+        
+        <div class="volunteer-card">
+          <div class="volunteer-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3 class="volunteer-title">Digital Volunteer</h3>
+          <p class="volunteer-description">
+            Support our digital initiatives, content creation, social media management, 
+            and help us reach more people through technology.
+          </p>
+          <a href="#" class="volunteer-btn">Apply Now</a>
+        </div>
+        
+        <div class="volunteer-card">
+          <div class="volunteer-icon">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <h3 class="volunteer-title">Skill Trainer</h3>
+          <p class="volunteer-description">
+            Share your professional expertise by training beneficiaries in various skills, 
+            helping them build sustainable livelihoods.
+          </p>
+          <a href="#" class="volunteer-btn">Apply Now</a>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="cta" id="donate">
-    <h3>Partner With Us Through CSR</h3>
-    <p>Your support under Schedule VII of the Companies Act can help us care for those who once cared for us. Join hands to build a compassionate Mumbai.</p>
-    <a href="#contact" class="btn">Become a CSR Partner</a>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Get In Touch</div>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">
+          Ready to make a difference? Contact us to learn more about our work, 
+          partnership opportunities, or how you can get involved.
+        </p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h4>Our Address</h4>
+              <p>123 Social Impact Street<br>Mumbai, Maharashtra 400001<br>India</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <h4>Phone Number</h4>
+              <p>+91 98765 43210<br>+91 87654 32109</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h4>Email Address</h4>
+              <p>info@devashobhafoundation.org<br>volunteer@devashobhafoundation.org</p>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <input type="text" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-input form-textarea" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Devashobha Sanstha Trust</strong><br>
-    Badlapur, Thane District, Maharashtra<br>
-    Email: <a href="mailto:devashobha.trust@gmail.com">devashobha.trust@gmail.com</a><br>
-    Phone: +91-XXXXXXXXXX</p>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="4" placeholder="Your Message or CSR Query" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    &copy; 2025 Devashobha Sanstha Trust | Registered NGO | CSR-1 Certified | All rights reserved.
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Devashobha Foundation</h3>
+          <p>
+            Transforming lives through comprehensive social development programs. 
+            Join us in creating a more equitable and sustainable future for all.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Our Work</h3>
+          <a href="#">Women Empowerment</a>
+          <a href="#">Skill Development</a>
+          <a href="#">Elder Care</a>
+          <a href="#">Education</a>
+          <a href="#">Healthcare</a>
+          <a href="#">Environment</a>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Get Involved</h3>
+          <a href="#">Volunteer</a>
+          <a href="#">Donate</a>
+          <a href="#">CSR Partnership</a>
+          <a href="#">Corporate Volunteering</a>
+          <a href="#">Internships</a>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <a href="#">Annual Reports</a>
+          <a href="#">Impact Stories</a>
+          <a href="#">Media Coverage</a>
+          <a href="#">Transparency</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Devashobha Foundation. All rights reserved. | Privacy Policy | Terms of Service</p>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.98)';
+        header.style.boxShadow = '0 20px 40px -12px rgba(0, 0, 0, 0.15)';
+      } else {
+        header.style.background = 'rgba(255, 255, 255, 0.97)';
+        header.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1)';
+      }
+    });
+
+    // Animate elements on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all cards and content sections
+    document.querySelectorAll('.work-card, .volunteer-card, .stat-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'all 0.6s ease';
+      observer.observe(el);
+    });
+
+    // Form submission
+    document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message! We will get back to you soon.');
+      this.reset();
+    });
+
+    // Mobile menu toggle (basic implementation)
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      const navMenu = document.querySelector('.nav-menu');
+      navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Counter animation for stats
+    function animateCounter(element, target) {
+      let current = 0;
+      const increment = target / 100;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        element.textContent = Math.floor(current).toLocaleString() + '+';
+      }, 20);
+    }
+
+    // Trigger counter animation when stats section is visible
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const numbers = entry.target.querySelectorAll('.stat-number');
+          numbers.forEach(num => {
+            const target = parseInt(num.textContent.replace(/[^0-9]/g, ''));
+            animateCounter(num, target);
+          });
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    document.querySelector('.impact-stats') && statsObserver.observe(document.querySelector('.impact-stats'));
+  </script>
 </body>
 </html>
